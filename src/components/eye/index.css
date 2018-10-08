@@ -1,0 +1,25 @@
+.left-eye,
+.left-pupil,
+.left-highlight {
+    position: absolute;
+    top: 100px;
+    left: 80px;
+}
+
+.left-highlight,
+.right-highlight {
+    transform: scale(.15);
+}
+
+.left-pupil,
+.right-pupil {
+    transform: scale(.7);
+}
+
+.right-eye,
+.right-pupil,
+.right-highlight {
+    position: absolute;
+    top: 100px;
+    left: 170px;
+}

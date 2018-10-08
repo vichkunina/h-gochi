@@ -1,0 +1,21 @@
+.nose {
+    position: absolute;
+    transform: scale(.2);
+    top: 20px;
+    left: 0;
+}
+
+.nostril {
+    position: absolute;
+    top: 142px;
+    transform: scale(.3);
+    opacity: .6;
+}
+
+.right-nostril {
+    left: 135px;
+}
+
+.left-nostril {
+    left: 120px;
+}

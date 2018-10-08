@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Toolbar from '../src/components/toolbar';
+import Field from '../src/components/game-field';
+import AppContext from '../src/components/context';
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Dosha</h1>
-        </header>
-        <h2 className="App-intro">
-          Hello, Oleg!
-        </h2>
-      </div>
-    );
-  }
+    state = {
+        volume: 50
+    };
+    render() {
+        const context = {
+            ...this.state,
+            onVolChange: this.onVolChange
+        };
+        
+        return (
+            <AppContext.Provider value={context}>
+                <div className="App">
+                    <Toolbar />
+                    <Field />
+                </div>
+            </AppContext.Provider>
+        );
+    }
+
+    onVolChange = ({ target: { value } }) => {
+        this.setState({ volume: value });
+    }
 }
 
 export default App;
