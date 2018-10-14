@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
 import Eye from './../eye'
+import Ear from './../ear'
 import Nose from './../nose'
 import Mouth from './../mouth'
 
@@ -12,7 +13,10 @@ class Pig extends Component {
 				<img className="pig-body" src="/static/body.svg" />
                 {
                     sides.map(s => 
-                        <Eye side={s} key={s}/>
+                        <div>
+                            <Eye side={s} key={s}/>
+                            <Ear side={s} key={s}/>
+                        </div>
                     )
                 }
                 <Nose />

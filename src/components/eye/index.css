@@ -23,3 +23,17 @@
     top: 100px;
     left: 170px;
 }
+
+.pig-eye {
+    animation: close 300ms infinite;
+}
+
+@keyframes close {
+    5% {
+        /* transform: rotate(10deg) */
+    }
+    25% {
+    }
+    45% {
+    }
+  }

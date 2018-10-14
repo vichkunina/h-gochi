@@ -1,0 +1,13 @@
+.pig-ear {
+    position: absolute;
+    top: 82px;
+    transform: scale(1.4);
+}
+
+.left-ear {
+    left: -110px;
+}
+
+.right-ear {
+    left: 110px;
+}

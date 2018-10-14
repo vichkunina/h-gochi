@@ -6,8 +6,8 @@ class Nose extends Component {
 		return (
             <Fragment>
 			    <img className="nose" src="/static/nose.svg"></img>
-                <img className="right-nostril nostril" src="/static/eye.svg"></img>
-                <img className="left-nostril nostril" src="/static/eye.svg"></img>
+                <img className="right-nostril nostril" src="/static/nostril.svg"></img>
+                <img className="left-nostril nostril" src="/static/nostril.svg"></img>
             </Fragment>
 		);
 	}

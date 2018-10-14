@@ -1,9 +1,27 @@
-.pig-body {
-    /* height: 300px; */
-}
-
 .body {
    position: relative;
    width: 300px;
    height: 300px;
+   animation: rotate 3000ms infinite;
 }
+
+@keyframes rotate {
+    5% {
+        transform: rotate(0deg)
+    }
+    25% {
+        transform: rotate(10deg)
+    }
+    45% {
+        transform: rotate(0deg)
+    }
+    55% {
+        transform: rotate(0deg)
+    }
+    75% {
+        transform: rotate(-10deg)
+    } 
+    95% {
+        transform: rotate(0deg)
+    }
+  }
