@@ -9,14 +9,14 @@
     border-right: 1px solid  rgba(255, 255, 255, 0.08);
 }
 
-.resources {
+.toolbar__resources {
     display: flex;
     flex-direction: column;
     height: 280px;
     justify-content: space-between;
 }
 
-.separator {
+.toolbar__separator {
     width: 90%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     align-self: center;
@@ -24,7 +24,7 @@
     z-index: 3;
 }
 
-.toolbar-item {
+.toolbar__item {
     padding: 0 5%;
     width: 90%;
 }

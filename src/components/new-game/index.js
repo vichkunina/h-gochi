@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
+import b_ from 'b_';
+
+import mix from '../../utils/mix';
+
 import './index.css';
-class NewGame extends Component {
+
+const b = b_.with('newgame');
+
+export default class NewGame extends Component {
 	render() {
+		const { mixClass } = this.props
 		return (
-			<section className="newgame toolbar-item">
+			<section className={mix(b(), mixClass)}>
 				<button
-					className="newgame-button" 
+					className={b('button')}
 					type="button"
 					>
 					Начать новую игру
@@ -14,5 +22,3 @@ class NewGame extends Component {
 		);
 	}
 }
-
-export default NewGame;

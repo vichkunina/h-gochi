@@ -5,16 +5,16 @@
     left: 0;
 }
 
-.nostril {
+.nose__nostril {
     position: absolute;
     top: 81px;
     opacity: .6;
 }
 
-.right-nostril {
+.nose__nostril_side_right {
     left: 5px;
 }
 
-.left-nostril {
+.nose__nostril_side_left {
     left: -10px;
 }

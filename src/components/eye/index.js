@@ -1,16 +1,26 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
+import b_ from 'b_';
+
+import mix from '../../utils/mix';
+
 import './index.css';
-class Eye extends Component {
-	render() {
-        let { side } = this.props
-		return (
-            <Fragment>
-			    <img className={`${side}-eye pig-eye`} src="/static/eye.svg"></img>
-                <img className={`${side}-pupil pig-eye`} src="/static/pupil.svg"></img>
-                <img className={`${side}-highlight pig-eye`} src="/static/eye.svg"></img>
-            </Fragment>
-		);
-	}
+
+const b = b_.with('eye');
+
+const images = ['eyeball', 'pupil', 'highlight'];
+
+export default function Eye(props) {
+    const { side } = props;
+	return (
+        <Fragment>
+            {images.map(imageName =>
+                <img
+                    alt={imageName}
+                    className={mix(b('item', { side }), b(imageName))}
+                    src={`/static/${imageName}.svg`}
+                    />
+            )}
+        </Fragment>
+	);
 }
 
-export default Eye;

@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
+import b_ from 'b_';
+
+import mix from '../../utils/mix';
+
 import './index.css';
-class Suggest extends Component {
+
+const b = b_.with('suggest');
+
+export default class Suggest extends Component {
   render() {
+    const { mixClass } = this.props
     return (
-        <section className="suggest toolbar-item">
+        <section className={mix(b(), mixClass)}>
             Здесь будут всякие подсказки пользователю,
             много подсказок, возможно, с длинным
             текстом.
@@ -11,5 +19,3 @@ class Suggest extends Component {
     );
   }
 }
-
-export default Suggest;

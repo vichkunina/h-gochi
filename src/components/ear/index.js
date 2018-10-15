@@ -1,12 +1,13 @@
 import React from 'react';
+import b_ from 'b_';
+
 import './index.css';
-class Ear extends React.Component {
-	render() {
-        let { side } = this.props
-		return (
-			<img className={`${side}-ear pig-ear`} src={`/static/${side}-ear.svg`}></img>
-		);
-	}
+
+const b = b_.with('ear');
+
+export default function Ear(props) {
+	const { side } = props;
+
+	return <img alt="ear" className={b({ side })} src={`/static/${side}-ear.svg`} />;
 }
 
-export default Ear;

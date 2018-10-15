@@ -1,6 +1,6 @@
-.App {
-    color: rgb(244, 244, 244);
-    background-color: rgb(18, 18, 18);
+.app {
+    color: #f4f4f4;
+    background-color: #121212;
     display: flex;
     overflow: hidden;
 }

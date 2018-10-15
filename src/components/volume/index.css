@@ -1,8 +1,8 @@
-.volume-toogle {
+.volume__toogle {
     display: flex;
 }
 
-.volume-helper {
+.volume__helper {
     width: 30px;
     text-align: center;
     font-size: 20px;
@@ -10,7 +10,7 @@
     color: gray;
 }
 
-.volume-slider {
+.volume__slider {
     width: 26vh;
     height: 20px;
     -webkit-appearance: none;
@@ -20,7 +20,7 @@
     border: 1px solid #D4D4D4;
 }
 
-.volume-header {
+.volume__header {
     text-align: center;
     padding-bottom: 10px;
     font-size: 18px;

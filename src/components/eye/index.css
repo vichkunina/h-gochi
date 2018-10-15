@@ -1,30 +1,20 @@
-.left-eye,
-.left-pupil,
-.left-highlight {
+.eye__item {
     position: absolute;
     top: 100px;
-    left: 80px;
 }
 
-.left-highlight,
-.right-highlight {
-    transform: scale(.15);
-}
-
-.left-pupil,
-.right-pupil {
-    transform: scale(.7);
-}
-
-.right-eye,
-.right-pupil,
-.right-highlight {
-    position: absolute;
-    top: 100px;
+.eye__item_side_right {
     left: 170px;
 }
 
-.pig-eye {
-    /* animation: close 300ms infinite; */
+.eye__item_side_left {
+    left: 80px;
 }
 
+.eye__highlight {
+    transform: scale(.15);
+}
+
+.eye__pupil {
+    transform: scale(.7);
+}

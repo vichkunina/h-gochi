@@ -4,8 +4,8 @@
     align-items: center;
 }
 
-.characteristic-icon,
-.characteristic-picture {
+.characteristic__icon,
+.characteristic__picture {
     position: relative;
     width: 60px;
     height: 60px;
@@ -14,18 +14,18 @@
     box-shadow: 0 0 20px 30px #121212;
 }
 
-.characteristic-picture {
+.characteristic__picture {
     position: relative;
     z-index: 2;
 }
 
-.characteristic-text {
-    color: rgb(244, 244, 244);
+.characteristic__text {
+    color: #f4f4f4;
     width: 60%;
     font-size: 18px;
 }
 
-.characteristic-color {
+.characteristic__color {
     width: 60px;
     height: 20px;
     background: #c4a83c;
@@ -35,7 +35,7 @@
     transform: scale(.99);
 }
 
-.characteristic-wave {
+.characteristic__wave {
     position: relative;
     left: -757px;
     top: -66px;

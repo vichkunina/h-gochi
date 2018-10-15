@@ -3,7 +3,7 @@
     justify-content: center;
 }
 
-.newgame-button {
+.newgame__button {
     width: 80%;
     height: 40px;
     cursor: pointer;
@@ -15,10 +15,10 @@
     outline: none;
 }
 
-.newgame-button:hover {
+.newgame__button:hover {
     opacity: .7;
 }
 
-.newgame-button:active {
+.newgame__button:active {
     background-color: #ffd04d;
 }

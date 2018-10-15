@@ -1,16 +1,25 @@
 
 import React, { Component } from 'react';
-import './index.css';
+import b_ from 'b_';
+
+import mix from '../../utils/mix';
+
 import AppContext from '../context';
-class Volume extends Component {
-	
+
+import './index.css';
+
+const b = b_.with('volume');
+
+export default class Volume extends Component {
 	render() {
-		const { value } = this.props
+		const { mixClass } = this.props
 		return (
-			<section className="volume toolbar-item">
-				<div  className="volume-header">Громкость игры</div>
-				<div className="volume-toogle">
-					<div className="volume-helper volume-min">-</div>
+			<section className={mix(b(), mixClass)}>
+				<div className={b('header')}>Громкость игры</div>
+				<div className={b('toogle')}>
+					<div className={mix(b('helper'), b({value: 'min'}))}>
+						-
+					</div>
 					<AppContext.Consumer>
 						{({ volume, onVolChange }) =>
 							<input 
@@ -19,15 +28,15 @@ class Volume extends Component {
 								max="100" 
 								value={volume} 
 								onChange={onVolChange} 
-								className="volume-slider"
+								className={b('slider')}
 								/>
 						}
 					</AppContext.Consumer>
-					<div className="volume-helper volume-max">+</div>
+					<div className={mix(b('helper'), b({value: 'max'}))}>
+						+
+					</div>
 				</div>
 			</section>
 		);
 	}
 }
-
-export default Volume;

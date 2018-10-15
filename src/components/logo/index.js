@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+import b_ from 'b_';
+
 import './index.css';
-class Logo extends Component {
+
+const b = b_.with('logo');
+
+export default class Logo extends Component {
     render() {
-        return (
-            <section className="logo">
-                <img src="/static/h.svg" />
-            </section>
-        );
+        return <img alt="logo" className={b()} src="/static/h.svg" />;
     }
 }
-
-export default Logo;

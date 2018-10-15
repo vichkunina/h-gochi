@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
+import b_ from 'b_';
+
 import './index.css';
+import mix from '../../utils/mix';
+
+const b = b_.with('characteristic');
 
 const resourceName = {
     mood: 'Настроение',
@@ -17,17 +22,18 @@ class Characteristic extends Component {
     const { resource } = this.props;
 
     return (
-        <div className="characteristic">
-            <div className="characteristic-icon">
+        <div className={b()}>
+            <div className={b('icon')}>
                 <img
-                    className={`characteristic-picture characteristic-${resource}`}
+                    alt={`${resource}`}
+                    className={mix(b('picture'), b(resource))}
                     src={`/static/${resource}.png`}
                     />
-                <div className="characteristic-color">
-                <img src="/static/wave.svg" className="characteristic-wave" />
+                <div className={b('color')}>
+                <img alt='wave' src="/static/wave.svg" className={b('wave')} />
                 </div>
             </div>
-            <span className="characteristic-text">{resourceName[resource]}</span>
+            <span className={b('text')}>{resourceName[resource]}</span>
         </div>
     );
   }

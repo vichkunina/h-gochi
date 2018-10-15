@@ -1,16 +1,24 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
+import b_ from 'b_';
 import './index.css';
-class Nose extends Component {
-	render() {
-        let { side } = this.props
-		return (
-            <Fragment>
-			    <img className="nose" src="/static/nose.svg"></img>
-                <img className="right-nostril nostril" src="/static/nostril.svg"></img>
-                <img className="left-nostril nostril" src="/static/nostril.svg"></img>
-            </Fragment>
-		);
-	}
-}
 
-export default Nose;
+const b = b_.with('nose');
+
+export default function Nose(props) {
+    const { sides } = props;
+
+	return (
+        <Fragment>
+		    <img alt="nose" className={b()} src="/static/nose.svg" />
+            {
+                sides.map(side => (
+                    <img
+                        alt='' 
+                        className={b('nostril', { side })}
+                        src="/static/nostril.svg"
+                        />
+                ))
+            }
+        </Fragment>
+	);
+}
