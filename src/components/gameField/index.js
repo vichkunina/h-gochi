@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import b_ from 'b_';
 
-import Pig from '../main-character';
+import Pig from '../mainCharacter';
 
 import './index.css';
 

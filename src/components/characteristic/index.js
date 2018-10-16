@@ -13,24 +13,21 @@ const resourceName = {
 };
 
 class Characteristic extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        }
-    }
   render() {
     const { resource } = this.props;
+
+    const className = mix(b('picture'), b(resource));
 
     return (
         <div className={b()}>
             <div className={b('icon')}>
                 <img
-                    alt={`${resource}`}
-                    className={mix(b('picture'), b(resource))}
+                    alt={resource}
+                    className={className}
                     src={`/static/${resource}.png`}
                     />
                 <div className={b('color')}>
-                <img alt='wave' src="/static/wave.svg" className={b('wave')} />
+                <img alt="wave" src="/static/wave.svg" className={b('wave')} />
                 </div>
             </div>
             <span className={b('text')}>{resourceName[resource]}</span>

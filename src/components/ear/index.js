@@ -5,9 +5,10 @@ import './index.css';
 
 const b = b_.with('ear');
 
-export default function Ear(props) {
+const ear = (props) => {
 	const { side } = props;
 
 	return <img alt="ear" className={b({ side })} src={`/static/${side}-ear.svg`} />;
 }
 
+export default ear;

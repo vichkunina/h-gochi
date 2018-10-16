@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import b_ from 'b_';
 
 import './index.css';
 
 const b = b_.with('mouth');
 
-export default class Mouth extends Component {
-	render() {
-		return <img alt="mouth" className={b()} src="/static/mouth.svg" />;
-	}
-}
+const mouth = () => 
+	<img 
+		alt="mouth" 
+		className={b()} 
+		src="/static/mouth.svg" 
+		/>;
+
+export default mouth;

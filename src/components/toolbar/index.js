@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import b_ from 'b_';
 
-import NewGame from '../new-game';
+import NewGame from '../newGame';
 import Volume from '../volume';
 import Characteristic from '../characteristic';
 import Suggest from '../suggest';
@@ -16,11 +16,14 @@ const resourceList = ['mood', 'food', 'energy'];
 
 export default class Toolbar extends Component {
     render() {
+
+        const className = mix(b('resources'), b('item'));
+
         return (
             <section className={b()}>
                 <Logo />
                 <div className={b('separator')}/>
-                <section className={mix(b('resources'), b('item'))}>
+                <section className={className}>
                     {
                         resourceList.map(resource => 
                             <Characteristic

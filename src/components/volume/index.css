@@ -14,7 +14,7 @@
     width: 26vh;
     height: 20px;
     -webkit-appearance: none;
-    height: 0px;
+    height: 0;
     outline: none;
     margin: 10px;
     border: 1px solid #D4D4D4;

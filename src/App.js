@@ -3,7 +3,7 @@ import b_ from 'b_';
 
 import './App.css';
 import Toolbar from '../src/components/toolbar';
-import Field from '../src/components/game-field';
+import Field from '../src/components/gameField';
 import AppContext from '../src/components/context';
 
 const b = b_.with('app');

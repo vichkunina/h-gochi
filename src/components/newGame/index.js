@@ -9,9 +9,12 @@ const b = b_.with('newgame');
 
 export default class NewGame extends Component {
 	render() {
-		const { mixClass } = this.props
+		const { mixClass } = this.props;
+
+		const className = mix(b(), mixClass);
+		
 		return (
-			<section className={mix(b(), mixClass)}>
+			<section className={className}>
 				<button
 					className={b('button')}
 					type="button"

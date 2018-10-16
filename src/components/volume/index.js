@@ -12,12 +12,15 @@ const b = b_.with('volume');
 
 export default class Volume extends Component {
 	render() {
-		const { mixClass } = this.props
+		const { mixClass } = this.props;
+
+		const className = mix(b(), mixClass);
+
 		return (
-			<section className={mix(b(), mixClass)}>
+			<section className={className}>
 				<div className={b('header')}>Громкость игры</div>
 				<div className={b('toogle')}>
-					<div className={mix(b('helper'), b({value: 'min'}))}>
+					<div className={b('helper')}>
 						-
 					</div>
 					<AppContext.Consumer>
@@ -32,7 +35,7 @@ export default class Volume extends Component {
 								/>
 						}
 					</AppContext.Consumer>
-					<div className={mix(b('helper'), b({value: 'max'}))}>
+					<div className={b('helper')}>
 						+
 					</div>
 				</div>
