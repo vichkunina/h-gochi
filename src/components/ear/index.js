@@ -8,7 +8,7 @@ const b = b_.with('ear');
 const ear = (props) => {
 	const { side } = props;
 
-	return <img alt="ear" className={b({ side })} src={`/static/${side}-ear.svg`} />;
+	return <img alt="ear" className={b({ side })} src={`/static/ear.svg`} />;
 }
 
 export default ear;

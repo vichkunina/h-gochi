@@ -19,3 +19,9 @@ gemini.suite('game-button', function(suite) {
             actions.mouseDown(this.button);
         })
 });
+
+gemini.suite('.preloader', function(suite) {
+    suite.setUrl('/')
+        .setCaptureElements('.preloader')
+        .capture('plain');
+});
