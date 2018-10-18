@@ -1,0 +1,24 @@
+.newgame {
+    display: flex;
+    justify-content: center;
+}
+
+.newgame__button {
+    width: 80%;
+    height: 40px;
+    cursor: pointer;
+    color: #000;
+    background-color: #ffdb4d;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    outline: none;
+}
+
+.newgame__button:hover {
+    opacity: .7;
+}
+
+.newgame__button:active {
+    background-color: #ffd04d;
+}

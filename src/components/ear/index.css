@@ -1,0 +1,17 @@
+.ear {
+    /* left: -110px; */
+    position: absolute;
+    top: 55px;
+    /* transform: scale(1.4); */
+}
+
+.ear_side_left {
+    left: 45px;
+    /* transform: scale(1.4, 1.4); */
+}
+
+.ear_side_right {
+    right: 45px;
+    /* transform: scale(-1.4, 1.4); */
+    transform: scaleX(-1)
+}

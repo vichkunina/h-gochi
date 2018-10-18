@@ -1,0 +1,6 @@
+.mouth {
+    position: absolute;
+    transform: scale(0.15);
+    left: -120px;
+    top: 20px;
+}

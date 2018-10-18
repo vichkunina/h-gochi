@@ -1,0 +1,54 @@
+.characteristic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.characteristic__icon,
+.characteristic__picture {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    outline: none;
+    display: flex;
+    box-shadow: 0 0 20px 30px #121212;
+}
+
+.characteristic__picture {
+    position: relative;
+    z-index: 2;
+}
+
+.characteristic__text {
+    color: #f4f4f4;
+    width: 60%;
+    font-size: 18px;
+}
+
+.characteristic__color {
+    width: 60px;
+    height: 20px;
+    background: #c4a83c;
+    position: absolute;
+    z-index: 1;
+    align-self: flex-end;
+    transform: scale(.99);
+}
+
+.characteristic__wave {
+    position: relative;
+    left: -757px;
+    top: -66px;
+    transform: scale(.05);
+    align-self: flex-end;
+    animation: wave .4s cubic-bezier(0.36, 0.45, 0.63, 0.53) 0s infinite;
+}
+
+@keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -80px;
+    }
+}

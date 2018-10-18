@@ -1,0 +1,20 @@
+.eye__item {
+    position: absolute;
+    top: 100px;
+}
+
+.eye__item_side_right {
+    left: 170px;
+}
+
+.eye__item_side_left {
+    left: 80px;
+}
+
+.eye__highlight {
+    transform: scale(.15);
+}
+
+.eye__pupil {
+    transform: scale(.7);
+}

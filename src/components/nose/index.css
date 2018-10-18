@@ -1,0 +1,20 @@
+.nose {
+    position: absolute;
+    transform: scale(.2);
+    top: 20px;
+    left: 0;
+}
+
+.nose__nostril {
+    position: absolute;
+    top: 81px;
+    opacity: .6;
+}
+
+.nose__nostril_side_right {
+    left: 5px;
+}
+
+.nose__nostril_side_left {
+    left: -10px;
+}
