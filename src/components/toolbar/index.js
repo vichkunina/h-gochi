@@ -6,6 +6,7 @@ import Volume from '../volume';
 import Characteristic from '../characteristic';
 import Suggest from '../suggest';
 import Logo from '../logo';
+import AppContext from '../context';
 
 import './index.css';
 import mix from '../../utils/mix';
@@ -20,32 +21,43 @@ export default class Toolbar extends Component {
         const className = mix(b('resources'), b('item'));
 
         return (
-            <section className={b()}>
-                <Logo />
-                <div className={b('separator')}/>
-                <section className={className}>
-                    {
-                        resourceList.map(resource => 
-                            <Characteristic
-                                resource={resource}
-                                key={resource}
-                                />
-                        )
-                    }
-                </section>
-                <div className={b('separator')}/>
-                <Volume
-                    mixClass={b('item')}
-                    />
-                <div className={b('separator')} />
-                <Suggest
-                    mixClass={b('item')}
-                    />
-                <div className={b('separator')} />
-                <NewGame
-                    mixClass={b('item')}
-                    />
-            </section>
+            <AppContext.Consumer>
+                {(context) =>
+                    <section className={b()}>
+                        <Logo />
+                        <div className={b('separator')}/>
+                        <section className={className}>
+                            {
+                                resourceList.map(resource => {
+                                    const { 
+                                        [`${resource}Degree`]: resourceValue,
+                                        onPropertyChange
+                                    } = context;
+                                    return <Characteristic
+                                    onPropertyChange={onPropertyChange}
+                                    resourceValue={resourceValue}
+                                    resource={resource}
+                                    key={resource}
+                                    />
+                                }
+                                )
+                            }
+                        </section>
+                        <div className={b('separator')}/>
+                        <Volume
+                            mixClass={b('item')}
+                            />
+                        <div className={b('separator')} />
+                        <Suggest
+                            mixClass={b('item')}
+                            />
+                        <div className={b('separator')} />
+                        <NewGame
+                            createNewGame={context.createNewGame}
+                            mixClass={b('item')}
+                            />
+                    </section>}
+                </AppContext.Consumer>
         );
     }
 }

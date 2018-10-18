@@ -11,6 +11,9 @@ const b = b_.with('app');
 
 export default class App extends Component {
     state = {
+        energyDegree: 60,
+        moodDegree: 60,
+        foodDegree: 60,
         volume: 50
     };
 
@@ -21,7 +24,9 @@ export default class App extends Component {
     render() {
         const context = {
             ...this.state,
-            onVolChange: this.onVolChange
+            onVolChange: this.onVolChange,
+            onPropertyChange: this.onPropertyChange,
+            createNewGame: this.createNewGame
         };
 
         const { isContentLoaded } = this.state;
@@ -38,4 +43,11 @@ export default class App extends Component {
     }
 
     onVolChange = ({ target: { value } }) => this.setState({ volume: value });
+    onPropertyChange = (propertyName, degree) => this.setState({ [`${propertyName}Degree`]: degree });
+    createNewGame = () =>
+        this.setState({
+            moodDegree: 60,
+            foodDegree: 60,
+            energyDegree: 60
+        });
 }

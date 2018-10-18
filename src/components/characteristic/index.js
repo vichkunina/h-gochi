@@ -13,27 +13,36 @@ const resourceName = {
 };
 
 class Characteristic extends Component {
-  render() {
-    const { resource } = this.props;
+    componentDidMount() {
+        setInterval(() => {
+            const { resourceValue: height, onPropertyChange, resource } = this.props;
 
-    const className = mix(b('picture'), b(resource));
+            this.degree.style.height = `${height}px`;
+            onPropertyChange(resource, height - 1);
+        }, 100)
+    }
 
-    return (
-        <div className={b()}>
-            <div className={b('icon')}>
-                <img
-                    alt={resource}
-                    className={className}
-                    src={`/static/${resource}.png`}
-                    />
-                <div className={b('color')}>
-                <img alt="wave" src="/static/wave.svg" className={b('wave')} />
+    render() {
+        const { resource } = this.props;
+
+        const className = mix(b('picture'), b(resource));
+
+        return (
+            <div className={b()}>
+                <div className={b('icon')}>
+                    <img
+                        alt={resource}
+                        className={className}
+                        src={`/static/${resource}.png`}
+                        />
+                    <div ref={item => this.degree = item} className={b('color')}>
+                    <img alt="wave" src="/static/wave.svg" className={b('wave')} />
+                    </div>
                 </div>
+                <span className={b('text')}>{resourceName[resource]}</span>
             </div>
-            <span className={b('text')}>{resourceName[resource]}</span>
-        </div>
-    );
-  }
+        );
+    }
 }
 
 export default Characteristic;
